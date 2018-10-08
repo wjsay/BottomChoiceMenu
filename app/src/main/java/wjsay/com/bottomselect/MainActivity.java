@@ -2,7 +2,6 @@ package wjsay.com.bottomselect;
 
 import android.app.Activity;
 import android.app.Dialog;
-import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -27,9 +26,9 @@ public class MainActivity extends AppCompatActivity  {
 
 
     class BottomMenuOnClinkListener implements View.OnClickListener {
-        Context context;
-        public BottomMenuOnClinkListener(Context context) {
-            this.context = context;
+        Activity activity;
+        public BottomMenuOnClinkListener(Activity activity) {
+            this.activity = activity;
         }
         @Override
         public void onClick(View view) {
@@ -40,16 +39,16 @@ public class MainActivity extends AppCompatActivity  {
                     break;
                 case R.id.tv_choose_img:
                     //选择照片按钮
-                    Toast.makeText(context, "请选择照片", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(activity, "请选择照片", Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.tv_open_camera:
                     //拍照按钮
-                    Toast.makeText(context, "即将打开相机", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(activity, "即将打开相机", Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.btn_cancel:
                     //取消按钮
                     // mCameraDialog.dimiss(); // 取消菜单
-                    Toast.makeText(context, "取消", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(activity, "取消", Toast.LENGTH_SHORT).show();
                     break;
 
             }
