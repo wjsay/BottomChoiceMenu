@@ -22,12 +22,7 @@ public class MainActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btn_bottom_dialog = findViewById(R.id.tv_bottom_dialog);
-        btn_bottom_dialog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setDialog();
-            }
-        });
+        btn_bottom_dialog.setOnClickListener(new BottomMenuOnClinkListener(this));
     }
 
 
